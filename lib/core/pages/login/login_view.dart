@@ -4,6 +4,7 @@ import 'package:kartal/kartal.dart';
 
 part 'package:doctor_appointment/core/widgets/custom_button.dart';
 part 'package:doctor_appointment/core/widgets/custom_text.dart';
+part 'package:doctor_appointment/core/widgets/custom_text_button.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -115,12 +116,13 @@ class _LoginViewState extends State<LoginView> {
                                   ?.copyWith(
                                 color: Colors.grey,
                               )),
-                          TextButton(
+                          CustomTextButton(
+                              title: 'Sign up',
                               onPressed: () {},
-                              child: Text(
-                                'Sign up',
-                                style: context.general.textTheme.titleMedium
-                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              style: context.general.textTheme.titleMedium
+                                  ?.copyWith(
+                                color: Theme.of(context).colorScheme.primary,
+                                fontWeight: FontWeight.bold,
                               ))
                         ],
                       ),
