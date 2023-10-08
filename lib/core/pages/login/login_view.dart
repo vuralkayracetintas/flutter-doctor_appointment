@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kartal/kartal.dart';
+
+part 'package:doctor_appointment/core/widgets/custom_button.dart';
+part 'package:doctor_appointment/core/widgets/custom_text.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -24,14 +28,16 @@ class _LoginViewState extends State<LoginView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Welcome',
-                style: context.general.textTheme.displayMedium,
+              CustomText(
+                title: 'Welcome',
+                style: context.general.textTheme.displaySmall,
               ),
-              Text(
-                'Sign in to your account',
+              SizedBox(height: context.sized.height * 0.01),
+              CustomText(
+                title: 'Sign in to your account',
                 style: context.general.textTheme.titleMedium,
               ),
+              SizedBox(height: context.sized.height * 0.01),
               TextFormField(
                 controller: emailController,
                 keyboardType: TextInputType.visiblePassword,
@@ -42,6 +48,7 @@ class _LoginViewState extends State<LoginView> {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.email_outlined)),
               ),
+              SizedBox(height: context.sized.height * 0.03),
               TextFormField(
                 controller: passwordController,
                 keyboardType: TextInputType.visiblePassword,
@@ -62,7 +69,65 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
               ),
-              const Text('Forgot your password ?'),
+              SizedBox(height: context.sized.height * 0.05),
+              CustomButton(
+                title: 'Sign in',
+                onPressed: () {},
+              ),
+              SizedBox(height: context.sized.height * 0.03),
+              Center(
+                child: TextButton(
+                    onPressed: () {},
+                    child: const Text('Forgot your password ?')),
+              ),
+              const Spacer(),
+              Padding(
+                padding: context.padding.medium,
+                child: Center(
+                  child: Column(
+                    children: [
+                      CustomText(
+                          title: 'Continue social account  ',
+                          style:
+                              context.general.textTheme.titleMedium?.copyWith(
+                            color: Colors.grey,
+                          )),
+                      SizedBox(height: context.sized.height * 0.01),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: Icon(FontAwesomeIcons.google),
+                              label: Text('Google')),
+                          ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: Icon(FontAwesomeIcons.facebook),
+                              label: Text('Facebook')),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CustomText(
+                              title: 'Don\'t have an account ?',
+                              style: context.general.textTheme.titleMedium
+                                  ?.copyWith(
+                                color: Colors.grey,
+                              )),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Sign up',
+                                style: context.general.textTheme.titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              ))
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
