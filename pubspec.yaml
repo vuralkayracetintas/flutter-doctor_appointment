@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   kartal: ^3.4.4
   font_awesome_flutter: ^10.5.0
+  flutter_gutter: ^1.0.0
+
 
 dev_dependencies:
   flutter_test:

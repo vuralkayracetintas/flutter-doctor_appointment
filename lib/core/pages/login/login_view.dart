@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gutter/flutter_gutter.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kartal/kartal.dart';
 
@@ -33,7 +34,8 @@ class _LoginViewState extends State<LoginView> {
                 title: 'Welcome',
                 style: context.general.textTheme.displaySmall,
               ),
-              SizedBox(height: context.sized.height * 0.01),
+              // SizedBox(height: context.sized.height * 0.01),
+              Gutter(),
               CustomText(
                 title: 'Sign in to your account',
                 style: context.general.textTheme.titleMedium,
@@ -49,7 +51,8 @@ class _LoginViewState extends State<LoginView> {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.email_outlined)),
               ),
-              SizedBox(height: context.sized.height * 0.03),
+              // SizedBox(height: context.sized.height * 0.03),
+              Gutter(),
               TextFormField(
                 controller: passwordController,
                 keyboardType: TextInputType.visiblePassword,
@@ -75,7 +78,8 @@ class _LoginViewState extends State<LoginView> {
                 title: 'Sign in',
                 onPressed: () {},
               ),
-              SizedBox(height: context.sized.height * 0.03),
+              // SizedBox(height: context.sized.height * 0.03),
+              Gutter(),
               Center(
                 child: TextButton(
                     onPressed: () {},
@@ -93,7 +97,8 @@ class _LoginViewState extends State<LoginView> {
                               context.general.textTheme.titleMedium?.copyWith(
                             color: Colors.grey,
                           )),
-                      SizedBox(height: context.sized.height * 0.01),
+                      // SizedBox(height: context.sized.height * 0.01),
+                      Gutter(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
