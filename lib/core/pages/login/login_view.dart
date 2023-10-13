@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/core/pages/home/home_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gutter/flutter_gutter.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,6 +14,8 @@ class LoginView extends StatefulWidget {
   @override
   State<LoginView> createState() => _LoginViewState();
 }
+
+int selectedPage = 0;
 
 class _LoginViewState extends State<LoginView> {
   bool isVisible = false;
@@ -76,7 +79,13 @@ class _LoginViewState extends State<LoginView> {
               SizedBox(height: context.sized.height * 0.05),
               CustomButton(
                 title: 'Sign in',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => const HomeLayout(),
+                    ),
+                  );
+                },
               ),
               // SizedBox(height: context.sized.height * 0.03),
               Gutter(),
