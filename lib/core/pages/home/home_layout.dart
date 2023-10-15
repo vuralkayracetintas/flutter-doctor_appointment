@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/core/pages/appintments/appintments_view.dart';
 import 'package:doctor_appointment/core/pages/home/home_page_view.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,7 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   static final List<Widget> _selectPage = <Widget>[
     const HomePageView(),
-    const Text(
-      'Index 1: page 2',
-    )
+    const AppintmentsView()
   ];
   void selectedPageFunc(int index) {
     setState(() {
