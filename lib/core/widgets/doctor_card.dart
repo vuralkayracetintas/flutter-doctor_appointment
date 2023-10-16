@@ -4,7 +4,10 @@ import 'package:kartal/kartal.dart';
 class DoctorCard extends StatelessWidget {
   const DoctorCard({
     Key? key,
+    required this.route,
   }) : super(key: key);
+
+  final String route;
 
   @override
   Widget build(BuildContext context) {
@@ -23,31 +26,30 @@ class DoctorCard extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              Flexible(
+              const Flexible(
                 child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
                         "Dr x",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         "doctor category",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      const Spacer(),
+                      Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: const <Widget>[
+                        children: <Widget>[
                           Icon(
                             Icons.star_border,
                             size: 16,
@@ -78,6 +80,7 @@ class DoctorCard extends StatelessWidget {
         ),
         onTap: () {
           //pass the details to detail page
+          Navigator.pushNamed(context, route);
         },
       ),
     );

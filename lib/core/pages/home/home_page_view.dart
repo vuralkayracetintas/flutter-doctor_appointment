@@ -99,7 +99,12 @@ class HomePageView extends StatelessWidget {
               child: Text('Top Doctors',
                   style: context.general.textTheme.titleMedium),
             ),
-            Column(children: List.generate(10, (index) => DoctorCard()))
+            Column(
+                children: List.generate(
+                    10,
+                    (index) => DoctorCard(
+                          route: 'doc_details',
+                        )))
           ],
         ),
       ),

@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "doctor_appointment",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "doctor_appointment (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "doctor_appointment (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "iPhone 14 (mobile)",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "B2EF36EE-588D-4E87-8DFD-3D01E28C4826"
+        },
+        {
+            "name": "iPhone SE (3rd generation) (mobile)",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "B8FF31E9-517B-4395-8A3F-E4D7969A59F0"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "All Devices",
+            "configurations": ["iPhone 14 (mobile)","iPhone SE (3rd generation) (mobile)" ]
+        }
+    ]
+}
